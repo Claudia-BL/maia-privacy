@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Returning to MAIA</title>
+  <style>
+    body{margin:0;padding:48px 22px;background:#fbfaf6;color:#28362f;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    main{max-width:620px;margin:10vh auto;padding:28px;background:#fffefa;border:1px solid #e5e8df;border-radius:18px}
+    h1{margin-top:0;font-size:28px}p{color:#68766d}a{color:#526f58}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Returning to MAIA</h1>
+    <p id="status">Sending the WHOOP sign-in result back to MAIA on this Mac…</p>
+    <noscript><p>Please enable JavaScript to return to MAIA.</p></noscript>
+  </main>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const hasResult = params.has("code") || params.has("error");
+      history.replaceState(null, "", window.location.pathname);
+      if (!hasResult || !params.has("state")) {
+        document.getElementById("status").textContent = "No WHOOP sign-in result was found. Return to MAIA and try connecting again.";
+        return;
+      }
+      const localCallback = new URL("http://127.0.0.1:8767/api/whoop/callback");
+      localCallback.search = params.toString();
+      window.location.replace(localCallback.href);
+    })();
+  </script>
+</body>
+</html>
