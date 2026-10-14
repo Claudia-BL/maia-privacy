@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Privacy Policy · MAIA</title>
+  <meta name="description" content="How MAIA handles information when you use the local personal assistant and its WHOOP connection.">
+  <style>
+    :root{color-scheme:light;--ink:#28362f;--muted:#68766d;--line:#e5e8df;--green:#718a75;--paper:#fbfaf6;--card:#fffefa}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    main{max-width:820px;margin:0 auto;padding:64px 24px 80px}.brand{color:var(--green);font-weight:700;letter-spacing:.08em;text-transform:lowercase}
+    h1{margin:16px 0 8px;font-size:clamp(36px,7vw,54px);line-height:1.08;letter-spacing:-.04em}h2{margin:34px 0 8px;font-size:21px;line-height:1.3}
+    p,li{color:#4f5f55}a{color:#526f58}time,.updated{color:var(--muted);font-size:14px}.intro{font-size:18px;color:var(--muted)}
+    section{border-top:1px solid var(--line);margin-top:24px;padding-top:2px}.callout{background:#eef1e9;border-radius:14px;padding:16px 18px;margin:24px 0;color:#46584a}
+    footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+<main>
+  <div class="brand">maia · your day, thoughtfully</div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective October 14, 2026</p>
+  <p class="intro">MAIA is a personal assistant designed to run on your Mac. This policy explains what information MAIA handles, including when you choose to connect WHOOP.</p>
+
+  <div class="callout"><strong>In brief:</strong> MAIA stores its records on your Mac. The WHOOP connection is optional, read-only, and starts only after you authorize it. MAIA does not sell your personal information or send it to an advertising or analytics service.</div>
+
+  <section>
+    <h2>Information MAIA handles</h2>
+    <p>Depending on the features you use, MAIA may store tasks, projects, notes, manually entered finance records and budgets, meal lists, well-being check-ins, conversation text, and memories you explicitly ask it to save. These records are kept in a local database on your Mac.</p>
+    <p>If you use voice input, your browser sends the recording to the MAIA service running on your Mac for transcription by a local Whisper model. The recording is discarded after transcription. Text is saved as a conversation only if you choose to send it.</p>
+    <p>If you grant macOS access, MAIA can read your Apple Calendar events and incomplete Reminders when you request a sync. It can create or edit items only after you review and submit the change; deletion requires a separate confirmation. Calendar and reminder data is displayed locally and is not copied into MAIA's database.</p>
+  </section>
+
+  <section>
+    <h2>WHOOP connection</h2>
+    <p>Connecting WHOOP is optional. MAIA uses WHOOP OAuth so you can authorize access through WHOOP. If you connect and choose to sync, MAIA requests read access to recovery, cycle and strain, sleep, and workout information. It does not create or change WHOOP records.</p>
+    <p>MAIA keeps its WHOOP client credentials in a local, private configuration file. Access and refresh tokens are stored in a file on your Mac with owner-only file permissions. A manual sync retrieves recent WHOOP summaries for display in MAIA; the summaries are kept in the page's memory and are not written to the MAIA database.</p>
+    <p>Authorization and data requests are sent to WHOOP over HTTPS. WHOOP handles those requests under its own terms and privacy practices. Disconnecting or revoking access through WHOOP prevents future authorized access; deleting MAIA's local token file alone may not revoke the authorization at WHOOP.</p>
+  </section>
+
+  <section>
+    <h2>AI processing and other services</h2>
+    <p>MAIA sends prompts to Ollama running locally on your Mac. This setup has no cloud AI fallback. Use a locally installed model; selecting a cloud-hosted model would send prompts to that model provider under its terms.</p>
+    <p>MAIA does not connect to a bank, Google services, Apple Contacts, or Apple Notes in this build. Finance records are entered by you and are not live bank balances. The interface does not use advertising trackers or analytics.</p>
+  </section>
+
+  <section>
+    <h2>Storage, security, and retention</h2>
+    <p>MAIA is intended for one person using one trusted Mac. Its local database and WHOOP token file are stored on that Mac. The application does not encrypt database records itself, and local storage is not a substitute for macOS disk encryption or a secure backup. Keep the Mac and backups protected.</p>
+    <p>Information remains on the Mac until you delete it or remove the relevant local files. MAIA supports exporting data and clearing the conversation, but does not currently provide a single control to delete every record. Removing the local database permanently removes records stored only there. Deleting the WHOOP token file removes the local token copy but does not necessarily revoke WHOOP's authorization.</p>
+  </section>
+
+  <section>
+    <h2>Your choices</h2>
+    <ul>
+      <li>You can choose whether to connect WHOOP and whether to sync.</li>
+      <li>You can revoke WHOOP access through your WHOOP account.</li>
+      <li>You can deny or revoke Calendar and Reminders access in macOS System Settings under Privacy &amp; Security.</li>
+      <li>You can review and export locally stored MAIA information in Privacy &amp; setup.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>This policy may be updated when MAIA's features or data handling change. The effective date above indicates the latest version.</p>
+  </section>
+
+  <footer>
+    <p>For privacy questions, use the contact email provided for MAIA in the WHOOP Developer Dashboard.</p>
+    <p>MAIA is a personal software project, not a medical service. Well-being features do not provide medical advice or diagnosis.</p>
+  </footer>
+</main>
+</body>
+</html>
