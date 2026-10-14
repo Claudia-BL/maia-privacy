@@ -36,7 +36,7 @@
     <h2>WHOOP connection</h2>
     <p>Connecting WHOOP is optional. MAIA uses WHOOP OAuth so you can authorize access through WHOOP. If you connect and choose to sync, MAIA requests read access to recovery, cycle and strain, sleep, and workout information. It does not create or change WHOOP records.</p>
     <p>MAIA keeps its WHOOP client credentials in a local, private configuration file. Access and refresh tokens are stored in a file on your Mac with owner-only file permissions. A manual sync retrieves recent WHOOP summaries for display in MAIA; the summaries are kept in the page's memory and are not written to the MAIA database.</p>
-    <p>Authorization and data requests are sent to WHOOP over HTTPS. WHOOP handles those requests under its own terms and privacy practices. Disconnecting or revoking access through WHOOP prevents future authorized access; deleting MAIA's local token file alone may not revoke the authorization at WHOOP.</p>
+    <p>WHOOP sends the one-time authorization result to a static callback page hosted on GitHub Pages. That page immediately forwards the result to MAIA running on this Mac; it does not receive the client secret or WHOOP health summaries. Authorization and data requests are sent to WHOOP over HTTPS. WHOOP handles those requests under its own terms and privacy practices. Disconnecting or revoking access through WHOOP prevents future authorized access; deleting MAIA's local token file alone may not revoke the authorization at WHOOP.</p>
   </section>
 
   <section>
